@@ -4,7 +4,7 @@ OR
 
 To run it in your docker container:
 
-Open your terminal in the root directory.
-Type > docker-compose up --build OR docker-compose up, if you do not want to build any images.
-You can use docker-machine ip to check your docker IP address.
-View it at <"your docker machine IP address">:3000
+1) Open your terminal in the root directory.
+2) Type > docker-compose up --build OR docker-compose up, if you do not want to build any images.
+3) You can use docker-machine ip to check your docker IP address.
+4) View it at <"your docker machine IP address">:3000
