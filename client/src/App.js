@@ -24,7 +24,7 @@ function App() {
 
   const handleSubmit = () => {
     validateYear(year);
-    axios.post('http://localhost:5000/api/getNric', {
+    axios.post('/api/getNric', {
       year: year
     })
       .then(res => {

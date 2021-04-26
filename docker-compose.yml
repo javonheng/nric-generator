@@ -1,15 +1,5 @@
 version: "3"
 services:
-    # frontend:
-    #     container_name: palo-nric-generator
-    #     build:
-    #         context: ./client
-    #         dockerfile: Dockerfile
-    #     image: javonheng/nric-generator
-    #     ports:
-    #         - "3000:3000"
-    #     volumes:
-    #         - ./client:/usr/src/app
     app:
         container_name: nric-generator
         build:
@@ -18,7 +8,6 @@ services:
         image: javonheng/nric-generator
         ports:
             - "3000:3000"
+            - "5000:5000"
         volumes:
             - ./:/usr/src/app
-
-#https://dev.to/numtostr/running-react-and-node-js-in-one-shot-with-docker-3o09
