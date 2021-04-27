@@ -1,10 +1,13 @@
-You can access the NRIC-Generator site at: http://192.168.99.100:3000/
-
-OR
-
 To run it in your docker container:
 
 1) Open your terminal in the root directory.
-2) Type > docker-compose up --build OR docker-compose up, if you do not want to build any images.
-3) You can use docker-machine ip to check your docker IP address.
-4) View it at <"your docker machine IP address">:3000
+2) npm install 
+3) Go to client folder - cd client
+4) npm install
+5) Cd .. return to root directory and type docker-compose up --build or docker-compose up, if you do not want to build the image.
+6) View it at http://localhost:3000 or  <"your docker machine IP address">:3000 (depending on where your docker is hosted on)
+7) You can get your docker machine IP address by typing docker-machine ip in the cmd
+
+To run locally:
+1) Repeat steps 1 to 4 from above.
+2) Use npm run dev in the root directory.
