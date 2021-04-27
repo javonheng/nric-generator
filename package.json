@@ -7,7 +7,8 @@
     "server": "nodemon index.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm test\" \"npm run server\" \"npm run client\" ",
-    "test": "mocha --reporter spec"
+    "test": "mocha --reporter spec",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
