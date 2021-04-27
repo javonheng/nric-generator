@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const path = require('path');
 const e = require('express');
 const cors = require('cors');
 const app = express();
@@ -8,6 +9,8 @@ const port = process.env.PORT || 5000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
+
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.get('/api/hello', (req, res) => {
   res.send({ express: 'Hello From Express' });
@@ -85,6 +88,10 @@ app.post('/api/getNric', (req, res) => {
             nric: nric,
         });
     }
+});
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
